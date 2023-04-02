@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "frame-lab2",
+    "slug": "lab2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+   
+    "extra": {
+      "eas": {
+        "projectId": "fe803c64-d216-46b9-a06e-412014d613db"
+      }
+    },
+    "owner": "crookedframe"
+  }
+}
