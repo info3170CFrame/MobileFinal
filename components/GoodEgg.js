@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import Matter from "matter-js";
-import { SpriteSheet } from "rn-sprite-sheet";
+// import { SpriteSheet } from "rn-sprite-sheet";
 
 const GoodEgg = (props) => {
 	const width = props.size.width;
@@ -21,7 +21,7 @@ const GoodEgg = (props) => {
 				position: "absolute",
 			}}
 		>
-			<SpriteSheet source={require("../assets/goldenEgg.png")} />
+			{/* <SpriteSheet source={require("../assets/goldenEgg.png")} /> */}
 		</View>
 	);
 };
