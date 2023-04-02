@@ -84,6 +84,14 @@ export default function App() {
 			clearTimeout(timer);
 		};
 	}, [scored]);
+
+	const handleRestart = () => {
+		setStartGame(false);
+		setGameOver(false);
+		setScore(0);
+		gameEngine.swap(entities());
+	};
+
 	return (
 		<View style={styles.container}>
 			<GameEngine
@@ -165,10 +173,18 @@ export default function App() {
 					</TouchableOpacity>
 				</View>
 			</View>
-			<Score
-				score={score}
-				setScore={setScore}
-			/>
+			<View style={styles.scoreContainer}>
+				<Score
+					score={score}
+					setScore={setScore}
+				/>
+				<TouchableOpacity
+					style={styles.restartButton}
+					onPress={handleRestart}
+				>
+					<Text style={styles.centerText}>Restart</Text>
+				</TouchableOpacity>
+			</View>
 
 			<Text style={styles.watermark}>Final Game</Text>
 		</View>
@@ -221,5 +237,17 @@ const styles = StyleSheet.create({
 		width: "100%",
 		position: "absolute",
 		bottom: 0,
+	},
+	restartButton: {
+		backgroundColor: "red",
+		padding: 34,
+		borderRadius: 50,
+		borderWidth: 2,
+		borderColor: "white",
+		margin: 5,
+		bottom: -10,
+	},
+	scoreContainer: {
+		bottom: -70,
 	},
 });

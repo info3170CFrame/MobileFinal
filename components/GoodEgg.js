@@ -43,5 +43,12 @@ export default (world, color, pos, size, extraOptions) => {
 		}
 	);
 	Matter.World.add(world, goodEgg);
-	return { body: enemy, color, pos, size, extraOptions, renderer: <GoodEgg /> };
+	return {
+		body: goodEgg,
+		color,
+		pos,
+		size,
+		extraOptions,
+		renderer: <GoodEgg />,
+	};
 };
